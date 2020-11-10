@@ -1,0 +1,485 @@
+<html>
+<head>
+<title>Netmask Table</title>
+<meta content="text/html; charset=windows-1250" http-equiv="Content-Type">
+<style>
+pre{margin:1px;font-size:13px;}
+h1 {
+  color:black;
+  /*font-family:verdana, arial, helvetica, sans-serif;*/
+  font-size:16px;
+  margin-bottom:0px;margin-top:3px;
+  text-decoration:underline;
+}
+h2 {
+  color:black;
+  /*font-family:verdana, arial, helvetica, sans-serif;*/
+  font-size:13px;
+  color: #BD092A;
+  margin-bottom:0px;margin-top:3px;
+  text-decoration:underline;font-weight: bolder;
+}
+caption {text-align:left;font-family:verdana, arial, helvetica, sans-serif;font-weight:bold;font-size:12px;margin-bottom:0;}
+th {color:#fff;background-color:#000;text-align:left}
+table {border:none;}
+.table0 {border-collapse:collapse;spacing:0;border:0;}
+.table0 tr:n-child(odd){background-color:yellow;}
+.table0 tr:n-child(even){background-color:red;}
+
+.table1 {border-collapse:collapse;spacing:0;border:1 solid #000;font-family:courier;font-size:11px;width:100%}
+/*.table1 tr{background-color:green;}*/
+.table1 tr:n-child(n){background-color:yellow;}
+.table1 tr:n-child(n+1){background-color:red;}
+.table1 tfoot{font-family:gorgia,verdana,arial,helvetica,sans-serif;font-size:11px;}
+</style>
+</head>
+<body>
+<h1>Tunisia IP addresses</h1>
+<table>
+<tr><td><h2>IPv4</h2><pre>
+41.224.0.0/13       TN-ATI
+102.168.0.0/13      OoredooTN
+102.240.0.0/14      ATI
+154.104.0.0/13      TUNISIANA
+154.72.224.0/20     TUNISIANA
+160.156.0.0/14      Orange-Tunisia-Smartphone
+164.160.0.0/22      EL-Khawarizmi
+165.50.0.0/15       ORANGE-TN
+169.255.68.0/22     Cloud-Temple
+169.255.92.0/22     STE-WEDOS
+192.68.138.0/24     RSINET
+193.95.0.0/17       TN-ATI
+196.176.0.0/14      Ooredoo-TN
+196.184.0.0/14      Tunisie-Telecom
+196.203.0.0/16      ATI
+196.224.0.0/12      Orange-Tunisia-Smartphone
+196.41.95.0/24      La-Poste-Tunisienne-v4
+197.0.0.0/11        TN-ATI
+213.150.160.0/19    TN-ATI
+
+</pre></td><td width=5 bgcolor=336699></td><td valign="top"><h2>IPv6</h2><pre>
+2001:4350::/32      ATI-IPV6-01
+2001:43f8:320::/48  AFDB-v6
+2c0f:f290::/32      Orange-Tunisie-v6
+2c0f:f3a0::/32      Tunisie-Telecom-v6
+2c0f:f5f8::/32      EL-Khawarizmi
+2c0f:f698::/32      TUNISIANA
+2c0f:f7c8::/32      Cloud-Temple
+2c0f:f7e0::/32      STE-WEDOS
+2c0f:fab0::/28      ATI-IPV6-02
+</pre></td><td width=5 bgcolor=336699></td><td valign="top"><h2>AS Numbers</h2><pre>
+AS2609  Tunisia BackBone AS
+AS5438  Agence Tunisienne d'Internet
+AS37693 TUNISIANA
+AS37504 Meninx Technologies
+AS37492 Orange Tunisie
+AS37706 STE WEDOS SUARL AS
+AS37705 TOPNET
+AS37703 ATLAX
+AS37671 3S INF
+AS37719 Hexabyte
+AS37709 Cloud Temple Tunisia
+AS37551 TUNIXP
+AS327969  Arab Tunisian Bank
+AS31245 ATI - Internet Service Provider
+</pre></td><td width=5 bgcolor=336699></td><td valign="top"><h2>AS Numbers (private)</h2><pre>
+AS65000 TUNISIETELECOM
+AS65050 IRESA
+AS65300 CCK
+AS65350 CIMSP
+AS65410 CNI
+AS65450 DEFENSE
+
+AS65535 G.G.C
+AS65111 MSSP
+</pre></td></tr></table>
+
+<br>
+<h1>8-port 10-Gigabit Ethernet X2 module</h1>
+<pre>
+* dCEF720
+* Supports egress multicast replication
+* QoS port architecture (Rx/Tx): 8q4t/1p7q4t
+* Dual switch-fabric connections
+    Fabric Channel #1: Ports 2, 3, 6, 8
+    Fabric Channel #2: Ports 1, 4, 5, 7
+* Number of ports: 8
+    Number of port groups: 8
+    Port ranges per port group: 1 port in each group
+    
+</pre>
+
+<table>
+<tr><td width=250 valign="top">
+<h1>Private IP Addresses (RFC 1918)</h1><pre>
+10.0.0.0/8
+172.16.0.0/12
+192.168.0.0/16
+</pre>
+</td><td width=1 bgcolor=0></td>
+<td valign=top>
+<h1>Reserved AS Numbers (RFC 1930)</h1><pre>
+64512 through 65535</pre>
+</td><td width=1 bgcolor=0></td>
+<td valign=top>
+<h1>Martian Addresses</h1><pre>
+0.0.0.0/8
+127.0.0.0/8
+128.0.0.0/16
+191.255.0.0/16
+192.0.0.0/24
+223.255.255.0/24
+240.0.0.0/4</pre>
+</tr></table>
+<br>
+
+<table class="table0" cellpadding="0" width="100%">
+<tr>
+ <td valign="top">
+  <table width="100%">
+    <caption>Administrative distance in CISCO</caption>
+    <tr>
+      <td>
+       <table class="table1">
+         <tr><th>Route Source</th><th>Default Distance Values</th></tr>
+         <tr><td>Connected interface</td><td>0</td></tr>
+         <tr><td>Static route</td><td>1</td></tr>
+         <tr><td>EIGRP</td><td>5</td></tr>
+         <tr><td>External BGP</td><td>20</td></tr>
+         <tr><td>Internal EIGRP</td><td>90</td></tr>
+         <tr><td>IGRP</td><td>100</td></tr>
+         <tr><td>OSPF</td><td>110</td></tr>
+         <tr><td>IS-IS</td><td>115</td></tr>
+         <tr><td>RIP</td><td>120</td></tr>
+         <tr><td>EGP</td><td>140</td></tr>
+         <tr><td>ODR</td><td>160</td></tr>
+         <tr><td>External EIGRP</td><td>170</td></tr>
+         <tr><td>Internal BGP</td><td>200</td></tr>
+         <tr><td>Unknown*</td><td>255</td></tr>
+         <tfoot>
+          <tr><td colspan=2 height=10></td></tr>
+          <tr><td colspan=2>
+          EIGRP: Enhanced Interior Gateway Routing Protocol<br>
+          IS-IS: Intermediate System-to-Intermediate System<br>
+          RIP: Routing Information Protocol<br>
+          EGP: Exterior Gateway Protocol<br>
+          ODR: On Demand Routing
+          </td></tr>
+         </tfoot>
+       </table>
+      </td>
+    </tr>
+  </table>
+ </td>
+ <td style="width:5px"></td>
+ <td>
+  <table width="100%">
+    <caption>Default Route Preferences in JUNOS Software</caption>
+    <tr>
+      <td>
+       <table class="table1">
+         <tr><th>Route Source</th><th>Default Route Preference</th></tr>
+         <tr><td>Directly connected router or network</td><td>0</td></tr>
+         <tr><td>Configured static routes</td><td>5</td></tr>
+         <tr><td>MPLS</td><td>7</td></tr>
+         <tr><td>LDP</td><td>9</td></tr>
+         <tr><td>OSPF internal routes</td><td>10</td></tr>
+         <tr><td>IS-IS Level 1 internal routes</td><td>15</td></tr>
+         <tr><td>IS-IS Level 2 internal routes</td><td>18</td></tr>
+         <tr><td>SNMP</td><td>50</td></tr>
+         <tr><td>RIP</td><td>100</td></tr>
+         <tr><td>PIM</td><td>105</td></tr>
+         <tr><td>DVMRP</td><td>110</td></tr>
+         <tr><td>Aggregate</td><td>130</td></tr>
+         <tr><td>OSPF external routes</td><td>150</td></tr>
+         <tr><td>IS-IS Level 1 external routes</td><td>160</td></tr>
+         <tr><td>IS-IS Level 2 external routes</td><td>165</td></tr>
+         <tr><td>BGP</td><td>170</td></tr>
+         <tr><td>MSDP</td><td>175</td></tr>
+         <tfoot>
+          <tr><td colspan=2 height=10></td></tr>
+          <tr><td colspan=2>
+          LDP: <br>
+          IS-IS: Intermediate System-to-Intermediate System<br>
+          RIP: Routing Information Protocol<br>
+          PIM: Protocol-Independent Multicast<br>
+          DVMRP: Distance Vector Multicast Routing Protocol<br>
+          SMDP: Multicast Source Discovery Protocol
+          </td></tr>
+         </tfoot>
+       </table>
+      </td>
+    </tr>
+  </table>
+ </td>
+ <td style="width:5px"></td>
+ <td valign="top">
+  <table width="50%">
+    <caption>Default Route Preferences in HUAWEI</caption>
+    <tr>
+      <td>
+       <table class="table1">
+         <tr><th>Route Source</th><th>Default Route Preference</th></tr>
+         <tr><td>DIRECT</td><td>0</td></tr>
+         <tr><td>OSPF</td><td>10</td></tr>
+         <tr><td>IS-IS</td><td>15</td></tr>
+         <tr><td>STATIC</td><td>60</td></tr>
+         <tr><td>RIP</td><td>100</td></tr>
+         <tr><td>OSPF ASE</td><td>150</td></tr>
+         <tr><td>OSPF NSSA</td><td>150</td></tr>
+         <tr><td>iBGP</td><td>255</td></tr>
+         <tr><td>eBGP</td><td>255</td></tr>
+         <tfoot>
+          <tr><td colspan=2 height=10></td></tr>
+          <tr><td colspan=2>
+          <b>When</b> different routing protocols are configured with the same preference, the system determines which route discovered by these routing protocols becomes the optimal route according to the internal preference </td></tr>
+         <tr><td>DIRECT</td><td>0</td></tr>
+         <tr><td>OSPF</td><td>10</td></tr>
+         <tr><td>IS-IS Level 1</td><td>15</td></tr>
+         <tr><td>IS-IS Level 2</td><td>18</td></tr>
+         <tr><td>STATIC</td><td>60</td></tr>
+         <tr><td>RIP</td><td>100</td></tr>
+         <tr><td>OSPF ASE</td><td>150</td></tr>
+         <tr><td>OSPF NSSA</td><td>150</td></tr>
+         <tr><td>iBGP</td><td>200</td></tr>
+         <tr><td>eBGP</td><td>20</td></tr>
+          </td></tr>
+         </tfoot>
+       </table>
+      </td>
+    </tr>
+  </table>
+ </td>
+</tr>
+</table>
+
+<h1>Wildcard masks</h1>
+<table border=1 style="border-collapse: collapse" cellspacing="0" cellpadding="0">
+<tr><td bgcolor=0><pre><b><font size="2" color="white">Prefix	Netmask		Wildcard mask       LOW IP        HI IP		#Class</font></b></pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/1	128.0.0.0	128.255.255.255</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/2	192.0.0.0	63.255.255.255</pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/3	224.0.0.0	31.255.255.255</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/4	240.0.0.0	15.255.255.255</pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/5	248.0.0.0	7.255.255.255</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/6	252.0.0.0	3.255.255.255</pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/7	254.0.0.0	1.255.255.255</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/8	255.0.0.0	0.255.255.255</pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/9	255.128.0.0	0.127.255.255</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/10	255.192.0.0	0.63.255.255</pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/11	255.224.0.0	0.31.255.255</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/12	255.240.0.0	0.15.255.255</pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/13	255.248.0.0	0.7.255.255        X.0.0.0       X.7.255.255	8 B</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/14	255.252.0.0	0.3.255.255        X.0.0.0       X.3.255.255	4 B</pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/15	255.254.0.0	0.1.255.255        X.0.0.0       X.1.255.255	2 B</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/16	255.255.0.0	0.0.255.255        X.Y.0.0       X.Y.255.255	1 B</pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/17	255.255.128.0	0.0.127.255        X.Y.0.0       X.Y.127.255	128 C</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/18	255.255.192.0	0.0.63.		   X.Y.0.0       X.Y.63.255	64 C</pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/19	255.255.224.0	0.0.31.255         X.Y.0.0       X.Y.31.255	32 C</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/20	255.255.240.0	0.0.15.255         X.Y.0.0       X.Y.15.255	16 C</pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/21	255.255.248.0	0.0.7.255          X.Y.0.0       X.Y.7.255	8 C</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/22	255.255.252.0	0.0.3.255          X.Y.0.0       X.Y.3.255	4 C</pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/23	255.255.254.0	0.0.1.255          X.Y.0.0       X.Y.1.255	2 C</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/24	255.255.255.0	0.0.0.255</pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/25	255.255.255.128	0.0.0.127</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/26	255.255.255.192	0.0.0.63</pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/27	255.255.255.224	0.0.0.31</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/28	255.255.255.240	0.0.0.15</pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/29	255.255.255.248	0.0.0.7</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/30	255.255.255.252	0.0.0.3</pre></td></tr>
+<tr><td bgcolor="#6495ED"><pre>/31	255.255.255.254	0.0.0.1</pre></td></tr>
+<tr><td bgcolor="#FFFACD"><pre>/32	255.255.255.255	0.0.0.0</pre></td></tr>
+</pre>
+</table>
+<br>
+<h1>Netmasks</h1><pre>
+Netmask 255.255.255.0 /24 (11111111.11111111.11111111.00000000)
+1 subnet
+LOW IP       HI IP
+x.x.x.0      x.x.x.255
+
+Netmask 255.255.255.128 /25 (11111111.11111111.11111111.10000000)
+2 subnets
+LOW IP       HI IP
+x.x.x.0      x.x.x.127
+x.x.x.128    x.x.x.255
+
+Netmask 255.255.255.192 /26 (11111111.11111111.11111111.11000000)
+4 subnets
+x.x.x.0      x.x.x.63
+x.x.x.64     x.x.x.127
+x.x.x.128    x.x.x.191
+x.x.x.192    x.x.x.255
+
+Netmask 255.255.255.224 /27 (11111111.11111111.11111111.11100000)
+8 subnets
+x.x.x.0      x.x.x.31
+x.x.x.32     x.x.x.63
+x.x.x.64     x.x.x.95
+x.x.x.96     x.x.x.127
+x.x.x.128    x.x.x.159
+x.x.x.160    x.x.x.191
+x.x.x.192    x.x.x.223
+x.x.x.224    x.x.x.255
+
+Netmask 255.255.255.240 /28 (11111111.11111111.11111111.11110000)
+16 subnets
+x.x.x.0      x.x.x.15
+x.x.x.16     x.x.x.31
+x.x.x.32     x.x.x.47
+x.x.x.48     x.x.x.63
+x.x.x.64     x.x.x.79
+x.x.x.80     x.x.x.95
+x.x.x.96     x.x.x.111
+x.x.x.112    x.x.x.127
+x.x.x.128    x.x.x.143
+x.x.x.144    x.x.x.159
+x.x.x.160    x.x.x.175
+x.x.x.176    x.x.x.191
+x.x.x.192    x.x.x.207
+x.x.x.208    x.x.x.223
+x.x.x.224    x.x.x.239
+x.x.x.240    x.x.x.255
+
+Netmask 255.255.255.248 /29 (11111111.11111111.11111111.11111000)
+32 subnets
+x.x.x.0      x.x.x.7
+x.x.x.8      x.x.x.15
+x.x.x.16     x.x.x.23
+x.x.x.24     x.x.x.31
+x.x.x.32     x.x.x.39
+x.x.x.40     x.x.x.47
+x.x.x.48     x.x.x.55
+x.x.x.56     x.x.x.63
+x.x.x.64     x.x.x.71
+x.x.x.72     x.x.x.79
+x.x.x.80     x.x.x.87
+x.x.x.88     x.x.x.95
+x.x.x.96     x.x.x.103
+x.x.x.104    x.x.x.111
+x.x.x.112    x.x.x.119
+x.x.x.120    x.x.x.127
+x.x.x.128    x.x.x.135
+x.x.x.136    x.x.x.143
+x.x.x.144    x.x.x.151
+x.x.x.152    x.x.x.159
+x.x.x.160    x.x.x.167
+x.x.x.168    x.x.x.175
+x.x.x.176    x.x.x.183
+x.x.x.184    x.x.x.191
+x.x.x.192    x.x.x.199
+x.x.x.200    x.x.x.207
+x.x.x.208    x.x.x.215
+x.x.x.216    x.x.x.223
+x.x.x.224    x.x.x.231
+x.x.x.232    x.x.x.239
+x.x.x.240    x.x.x.247
+x.x.x.248    x.x.x.255
+
+Netmask 255.255.255.252 /30 (11111111.11111111.11111111.11111100)
+64 subnets
+LOW IP       HI IP
+x.x.x.0      x.x.x.3
+x.x.x.4      x.x.x.7
+x.x.x.8      x.x.x.11
+x.x.x.12     x.x.x.15
+x.x.x.16     x.x.x.19
+x.x.x.20     x.x.x.23
+x.x.x.24     x.x.x.27
+x.x.x.28     x.x.x.31
+x.x.x.32     x.x.x.35
+x.x.x.36     x.x.x.39
+x.x.x.40     x.x.x.43
+x.x.x.44     x.x.x.47
+x.x.x.48     x.x.x.51
+x.x.x.52     x.x.x.55
+x.x.x.56     x.x.x.59
+x.x.x.60     x.x.x.63
+x.x.x.64     x.x.x.67
+x.x.x.68     x.x.x.71
+x.x.x.72     x.x.x.75
+x.x.x.76     x.x.x.79
+x.x.x.80     x.x.x.83
+x.x.x.84     x.x.x.87
+x.x.x.88     x.x.x.91
+x.x.x.92     x.x.x.95
+x.x.x.96     x.x.x.99
+x.x.x.100    x.x.x.103
+x.x.x.104    x.x.x.107
+x.x.x.108    x.x.x.111
+x.x.x.112    x.x.x.115
+x.x.x.116    x.x.x.119
+x.x.x.120    x.x.x.123
+x.x.x.124    x.x.x.127
+x.x.x.128    x.x.x.131
+x.x.x.132    x.x.x.135
+x.x.x.136    x.x.x.139
+x.x.x.140    x.x.x.143
+x.x.x.144    x.x.x.147
+x.x.x.148    x.x.x.151
+x.x.x.152    x.x.x.155
+x.x.x.156    x.x.x.159
+x.x.x.160    x.x.x.163
+x.x.x.164    x.x.x.167
+x.x.x.168    x.x.x.171
+x.x.x.172    x.x.x.175
+x.x.x.176    x.x.x.179
+x.x.x.180    x.x.x.183
+x.x.x.184    x.x.x.187
+x.x.x.188    x.x.x.191
+x.x.x.192    x.x.x.195
+x.x.x.196    x.x.x.199
+x.x.x.200    x.x.x.203
+x.x.x.204    x.x.x.207
+x.x.x.208    x.x.x.211
+x.x.x.212    x.x.x.215
+x.x.x.216    x.x.x.219
+x.x.x.220    x.x.x.223
+x.x.x.224    x.x.x.227
+x.x.x.228    x.x.x.231
+x.x.x.232    x.x.x.235
+x.x.x.236    x.x.x.239
+x.x.x.240    x.x.x.243
+x.x.x.244    x.x.x.247
+x.x.x.248    x.x.x.251
+x.x.x.252    x.x.x.255
+<br><br><br><br>
+<hr>
+CIDR         Binary                               Byte Notation  #Class
+-----        -----------------------------------  -------------- ------
+/0           00000000.00000000.00000000.00000000  0.0.0.0         256 A
+/1           10000000.00000000.00000000.00000000  128.0.0.0       128 A
+/2           11000000.00000000.00000000.00000000  192.0.0.0        64 A
+/3           11100000.00000000.00000000.00000000  224.0.0.0        32 A
+/4           11110000.00000000.00000000.00000000  240.0.0.0        16 A
+/5           11111000.00000000.00000000.00000000  248.0.0.0         8 A
+/6           11111100.00000000.00000000.00000000  252.0.0.0         4 A
+/7           11111110.00000000.00000000.00000000  254.0.0.0         2 A
+/8           11111111.00000000.00000000.00000000  255.0.0.0         1 A
+/9           11111111.10000000.00000000.00000000  255.128.0.0     128 B
+/10          11111111.11000000.00000000.00000000  255.192.0.0      64 B
+/11          11111111.11100000.00000000.00000000  255.224.0.0      32 B
+/12          11111111.11110000.00000000.00000000  255.240.0.0      16 B
+/13          11111111.11111000.00000000.00000000  255.248.0.0       8 B
+/14          11111111.11111100.00000000.00000000  255.252.0.0       4 B
+/15          11111111.11111110.00000000.00000000  255.254.0.0       2 B
+/16          11111111.11111111.00000000.00000000  255.255.0.0       1 B
+/17          11111111.11111111.10000000.00000000  255.255.128.0   128 C
+/18          11111111.11111111.11000000.00000000  255.255.192.0    64 C
+/19          11111111.11111111.11100000.00000000  255.255.224.0    32 C
+/20          11111111.11111111.11110000.00000000  255.255.240.0    16 C
+/21          11111111.11111111.11111000.00000000  255.255.248.0     8 C
+/22          11111111.11111111.11111100.00000000  255.255.252.0     4 C
+/23          11111111.11111111.11111110.00000000  255.255.254.0     2 C
+/24          11111111.11111111.11111111.00000000  255.255.255.0     1 C
+/25          11111111.11111111.11111111.10000000  255.255.255.128
+/26          11111111.11111111.11111111.11000000  255.255.255.192
+/27          11111111.11111111.11111111.11100000  255.255.255.224
+/28          11111111.11111111.11111111.11110000  255.255.255.240
+/29          11111111.11111111.11111111.11111000  255.255.255.248
+/30          11111111.11111111.11111111.11111100  255.255.255.252
+/31          11111111.11111111.11111111.11111110  255.255.255.254
+/32          11111111.11111111.11111111.11111111  255.255.255.255
+
+</pre>
+</body>
+</html>
