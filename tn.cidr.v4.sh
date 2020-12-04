@@ -28,6 +28,6 @@ for i in $(curl -s https://raw.githubusercontent.com/herrbischoff/country-ip-blo
  if [ $diff_days -lt 60 ]; then
   echo -en $i"\t"$assigmentDate"\t"$LIR"\e[1;97;41m*\e[0m"|column -t
  else
-  echo -en $i"\t"$assigmentDate"\t"$LIR|column -t
+  echo -en $i"\t"$assigmentDate"\t"$LIR
  fi
-done
+done|column -t
