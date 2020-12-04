@@ -22,8 +22,8 @@ for i in $(curl -s https://raw.githubusercontent.com/herrbischoff/country-ip-blo
  #else
  # echo -en $assigmentDate"\t"
  #fi
- LIR=$(whois -h whois.afrinic.net $i |egrep netname:|awk -F":" '{print $2}'| sed -e 's/^[[:space:]]*//'| sed -e 's/[[:space:]]*$//')
- 
+ LIR1=$(whois -h whois.afrinic.net $i |egrep netname:|awk -F":" '{print $2}'| sed -e 's/^[[:space:]]*//'| sed -e 's/[[:space:]]*$//')
+ LIR=$(echo $LIR1|sed "s/ooredoo.*$/Ooredoo/gI")
  #echo -en $i"\t"$assigmentDate"\t"$LIR
  if [ $diff_days -lt 60 ]; then
   echo -en $i"\t"$assigmentDate"\t"$LIR"\e[1;97;41m*\e[0m"
