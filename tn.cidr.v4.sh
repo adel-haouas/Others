@@ -26,8 +26,8 @@ for i in $(curl -s https://raw.githubusercontent.com/herrbischoff/country-ip-blo
  
  #echo -en $i"\t"$assigmentDate"\t"$LIR
  if [ $diff_days -lt 60 ]; then
-  echo -en $i"\t"$assigmentDate"\t"$LIR"\e[1;97;41m*\e[0m"|column -t
+  echo -en $i"\t"$assigmentDate"\t"$LIR"\e[1;97;41m*\e[0m\n"
  else
-  echo -en $i"\t"$assigmentDate"\t"$LIR
+  echo -en $i"\t"$assigmentDate"\t"$LIR"\n"
  fi
 done|column -t
