@@ -1,8 +1,9 @@
 #List tunisian IPv4 addresses with assigment dates
 
 clear && cd /tmp
-cDate_ts=$(date -d `date +"%Y%m%d"` '+%s')
+echo -e "Default \e[1;4;30;47m List tunisian IPv4 addresses with assigment dates ""\e[0m"
 
+cDate_ts=$(date -d `date +"%Y%m%d"` '+%s')
 cYear=$(date +"%Y")
 lastestFile=`curl -ls ftp://ftp.afrinic.net/pub/stats/afrinic/$cYear/|egrep "delegated-afrinic-$cYear"|egrep -v ".asc$|.md5$"|tail -1`
 
