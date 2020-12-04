@@ -2,7 +2,6 @@
 
 clear && cd /tmp
 cDate_ts=$(date -d `date +"%Y%m%d"` '+%s')
-echo $cDate_ts;
 
 cYear=$(date +"%Y")
 lastestFile=`curl -ls ftp://ftp.afrinic.net/pub/stats/afrinic/$cYear/|egrep "delegated-afrinic-$cYear"|egrep -v ".asc$|.md5$"|tail -1`
