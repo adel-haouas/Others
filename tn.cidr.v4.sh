@@ -1,7 +1,7 @@
 #List tunisian IPv4 addresses with assigment dates
 
 clear && cd /tmp
-echo -e "Default \e[1;4;30;47m List tunisian IPv4 addresses with assigment dates ""\e[0m"
+echo -e " \e[1;4;30;47m List tunisian IPv4 addresses with assigment dates \e[0m"
 
 cDate_ts=$(date -d `date +"%Y%m%d"` '+%s')
 cYear=$(date +"%Y")
