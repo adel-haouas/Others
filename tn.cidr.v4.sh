@@ -23,4 +23,4 @@ for i in $(curl -s https://raw.githubusercontent.com/herrbischoff/country-ip-blo
   echo -en $assigmentDate"\t"
  fi
  whois -h whois.afrinic.net $i |egrep netname:|awk -F":" '{print $2}'| sed -e 's/^[[:space:]]*//'| sed -e 's/[[:space:]]*$//'
-done
+done|column -t
