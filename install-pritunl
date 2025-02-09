@@ -1,0 +1,97 @@
+--------------------------------------------------------------------------------
+------- Debian12 ----------------------------------------
+#source: https://orcacore.com/pritunl-vpn-server-setup-debian12/
+
+hostnamectl set-hostname SrV-Pritunl
+
+apt update;apt install screen -y
+screen apt install curl gpg sudo
+
+curl -fsSL https://pgp.mongodb.com/server-6.0.asc | gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-server-6.0.gpg
+
+echo "deb [ arch=amd64,arm64 signed=/etc/apt/trusted.gpg.d/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+
+curl https://raw.githubusercontent.com/pritunl/pgp/master/pritunl_repo_pub.asc | apt-key add -
+echo "deb http://repo.pritunl.com/stable/apt $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/pritunl.list
+
+cat /etc/apt/sources.list.d/mongodb-org-6.0.list;echo;cat /etc/apt/sources.list.d/pritunl.list
+
+apt update && screen apt install mongodb-org pritunl -y
+
+systemctl enable --now pritunl mongod
+systemctl restart pritunl mongod ; systemctl status pritunl ; systemctl status mongod
+
+
+pritunl setup-key
+pritunl default-password
+
+
+cat /etc/network/interfaces
+echo "allow-hotplug $(ip route get 8.8.8.8 | awk '{print $5}')" >> /etc/network/interfaces
+echo "iface $(ip route get 8.8.8.8 | awk '{print $5}') inet static
+    address 172.31.1.5/23
+    gateway 172.31.1.1" >> /etc/network/interfaces
+
+echo "----";cat /etc/network/interfaces
+
+
+
+
+--------------------------------------------------------------------------------
+------- Alma9 / Rocky9 ----------------------------------------
+
+hostnamectl set-hostname SrV-Pritunl
+
+dnf install screen -y
+screen dnf -vy update
+
+dnf -y remove iptables-services
+systemctl stop firewalld.service && systemctl disable firewalld.service
+
+tee /etc/yum.repos.d/mongodb-org-6.0.repo << EOF
+[mongodb-org-6.0]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/6.0/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-6.0.asc
+EOF
+
+dnf clean all;dnf makecache
+
+screen dnf -vy install mongodb-org
+
+systemctl enable --now mongod
+systemctl restart mongod ; systemctl status mongod
+
+
+tee /etc/yum.repos.d/pritunl.repo << EOF
+[pritunl]
+name=Pritunl Repository
+baseurl=https://repo.pritunl.com/stable/yum/oraclelinux/9/
+gpgcheck=1
+enabled=1
+EOF
+
+gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys 7568D9BB55FF9E5287D586017AE645C0CF8E292A
+gpg --armor --export 7568D9BB55FF9E5287D586017AE645C0CF8E292A > key.tmp; sudo rpm --import key.tmp; rm -f key.tmp
+
+dnf -yv install pritunl
+
+pritunl version
+
+systemctl enable --now pritunl
+systemctl restart pritunl ; systemctl status pritunl
+
+sh -c 'echo "* hard nofile 64000" >> /etc/security/limits.conf'
+sh -c 'echo "* soft nofile 64000" >> /etc/security/limits.conf'
+sh -c 'echo "root hard nofile 64000" >> /etc/security/limits.conf'
+sh -c 'echo "root soft nofile 64000" >> /etc/security/limits.conf'
+
+pritunl setup-key
+pritunl default-password
+
+CONNECTION_NAME="ens192"
+nmcli connection modify "$CONNECTION_NAME" ipv4.method manual ipv4.addresses 172.31.1.172/23 ipv4.gateway 172.31.1.1 ipv4.dns "1.1.1.1,8.8.8.8"
+nmcli connection down "$CONNECTION_NAME" && nmcli connection up "$CONNECTION_NAME"
+ip -c a;ip route sh
