@@ -1,0 +1,33 @@
+## Nexus
+conf t
+cli alias name crc sh int | egrep ignore "^Port|Ethernet1/|crc|drop|error" | egrep -v "No operational members|Channel admin down|Link not connected|Administratively down|^\s*0 runts  0 giants  0 CRC  0 no buffer|^\s*0 input error  0 short frame  0 overrun   0 underrun  0 ignored|^\s*0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop|^\s*0 Stomped CRC|^\s*0 output error  0 collision  0 deferred  0 late collision|XCVR not inserted|^\s*0 input errors 0 frame 0 overrun 0 fifo|^\s*0 output errors 0 collisions 0 fifo|^\s*0 out_carrier_errors"
+cli alias name loop sh logg last 9999 | grep ignore-case loop | ex loopback
+cli alias name log sh logg last 33 | egrep -v "adelh"
+cli alias name wr copy running-config startup-config
+cli alias name pc show port-channel sum
+cli alias name bgp sh ip bgp su
+cli alias name c conf t
+cli alias name sri sh run int 
+cli alias name sir sh ip route 
+cli alias name srb sh run | b 
+cli alias name srin sh run | in 
+cli alias name spv sh span vlan 
+cli alias name cs clear screen
+
+## cisco LNS
+conf t  
+alias exec pc sh etherc su
+alias exec sri sh run int 
+alias exec c conf t
+alias exec sir sh ip route 
+alias exec srb sh run | b 
+alias exec sip sh int port-channel 
+alias exec cc clear counters 
+alias exec spv sh span vlan 
+alias exec srin sh run | inc 
+alias exec th term shell
+alias exec a1 show user sum ; show ip local pool
+alias exec srs sh run | sec 
+alias exec crc sh int | in (is up, line protocol is up|CRC|drops|rrun)
+
+  
